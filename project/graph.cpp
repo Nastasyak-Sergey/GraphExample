@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Gtaph.h"
+#include "graph.h"
 
 Graph::Graph()
 {
@@ -11,15 +11,17 @@ Graph::~Graph()
 
 istream& operator>>(istream& _istream, Graph& _graph)
 {
-    cout "Number of nodes: ";
+    cout << "Number of nodes: ";
     int n;
     _istream >> n;
+	cout << n << endl;
 
     _graph.m_AdjacencyList.resize(n);
 
-    cout "Number of edges: ";
+    cout << "Number of edges: ";
     int m;
     _istream >> m;
+	cout << m << endl;
 
     for (int i = 0; i < m; ++i)
     {
@@ -27,6 +29,7 @@ istream& operator>>(istream& _istream, Graph& _graph)
         int x, y;
 
         _istream >> x >> y;
+		cout << x << " " << y << endl;
         _graph.m_AdjacencyList[x].push_back(y);
         _graph.m_AdjacencyList[y].push_back(x);
     }

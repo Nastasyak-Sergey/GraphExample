@@ -2,7 +2,7 @@
 #define GRAPH_C
 
 #include <vector>
-
+#include <iostream>
 using namespace std;
 
 class Graph
@@ -12,18 +12,18 @@ public:
 
 
 public:
-    friend istream& operator>>(istream& _istream, Graph& _graph); 
-    
+    friend istream& operator>>(istream& _istream, Graph& _graph);
+
     Graph();
     ~Graph();
 
-    size_t NumberofNodes() {return m_AdjacencyList.size();}
+    size_t NumberOfNodes() {return m_AdjacencyList.size();}
 
     void DumpAdjacencyList();
 
 private:
     AdjacencyList m_AdjacencyList;
-}
+};
 
 
 

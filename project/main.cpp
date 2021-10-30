@@ -1,9 +1,13 @@
 #include <iostream>
-#include "Graph.h"
+#include "graph.h"
 
 
 int main(int argc, char *argv[])
 {
+
+	(void)(argc);
+	(void)(argv);
+
     Graph graph;
 
     cin >> graph;
